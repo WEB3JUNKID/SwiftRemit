@@ -11,14 +11,14 @@
       "use": "@vercel/static-build"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "server/$1.ts"
+      "source": "/api/(.*)",
+      "destination": "/server/$1.ts"
     },
     {
-      "src": "/(.*)",
-      "dest": "client/dist/$1"
+      "source": "/(.*)",
+      "destination": "/client/dist/$1"
     }
   ],
   "cleanUrls": true
